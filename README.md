@@ -1,31 +1,54 @@
+# Kom i gang med micro:bit
 
-> Åpne denne siden på [https://broccolisurprise.github.io/microbit-p-koderommet/](https://broccolisurprise.github.io/microbit-p-koderommet/)
+##Steg 0 YEAH @showdialog
+Først må vi koble micro:biten til PCen slik:
 
-## Bruk som utvidelse
+![Bilde av en micro:bit koblet til](https://d14xnrffmhx4ml.cloudfront.net/1662045701/veiledning-microbit-koderommet.JPG)
 
-Dette kodeområdet kan bli lagt til som en **utvidelse** i MakeCode.
 
-* åpne [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* klikk på **Nytt prosjekt**
-* klikk på **Utvidelser** i menyen under tannhjulet
-* søk etter **https://github.com/broccolisurprise/microbit-p-koderommet** og importér
+##Steg 1 prokkprik @showdialog
+Og så skal vi koble MakeCode sammen med micro:biten, så vi kan laste ned programmer med bare ett klikk:
 
-## Rediger dette prosjektet ![Bygg statusmerke](https://github.com/broccolisurprise/microbit-p-koderommet/workflows/MakeCode/badge.svg)
+![Bilde av USB-connect device](https://d14xnrffmhx4ml.cloudfront.net/1662046764/veiledning-microbit-koble-sammen.gif)
 
-For å redigere dette kodeområdet i MakeCode.
+##Steg 000 
+Gjør som i videoen:
 
-* åpne [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* klikk på **Importer** og så på **Importér URL**
-* lim inn **https://github.com/broccolisurprise/microbit-p-koderommet** og klikk på importér
+Trykk på det tre prikkene ved siden av "Last ned" og så "Connect Device". Trykk "NESTE, NESTE" og velg micro:bit på listen som dukker opp.
 
-## Forhåndsvisning av blokker
+Hvis ikonet på "Last ned" ser ut som et micro:bit-ansikt i stedet for et papir-ark med en pil, har dere gjort det riktig.
 
-Dette bildet viser blokk-koden fra den siste oppdateringen i hovedgrenen.
-Dette bildet kan ta noen minutter å oppdatere.
+Trykk på "Neste" for å fortsette.
 
-![En opptegnet visning av blokkene](https://github.com/broccolisurprise/microbit-p-koderommet/raw/master/.github/makecode/blocks.png)
+##Steg 0 YEAH
 
-#### Metadata (brukes for søk, visualisering)
+Lag et lite program med blokker fra Basis og Inndata.
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Trykk på "Last ned"-knappen i venstre hjørne for å teste.
+
+
+##Steg 2232 WOO
+Kjempeflott! Trykk på Slutt/Finish for å avslutte veiledningen. 
+
+```ghost
+input.onButtonPressed(Button.A, function () {
+    basic.pause(100)
+})
+input.onGesture(Gesture.Shake, function () {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showIcon(IconNames.Heart)
+})
+input.onSound(DetectedSound.Loud, function () {
+    basic.showString("Hello!")
+})
+basic.forever(function () {
+	
+})
+
+```
